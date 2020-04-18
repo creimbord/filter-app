@@ -8,23 +8,27 @@
 
 import UIKit
 
-class PhoneViewController: UIViewController {
-
+class PhoneViewController: UIViewController, Storyboarded {
+    
+    // MARK: - Properties
+    var presenter: PhonePresenter!
+    
+    // MARK: - Outlets
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Actions
+    @IBAction func openFilter(_ sender: UIBarButtonItem) {
+        presenter.showFilterModule()
     }
-    */
+}
 
+// MARK: - PhoneViewProtocol
+extension PhoneViewController: PhoneViewProtocol {    
+    var dataSource: PhoneDataSource {
+        PhoneDataSource(collectionView: collectionView)
+    }
 }

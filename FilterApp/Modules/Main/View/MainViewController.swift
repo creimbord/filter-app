@@ -8,13 +8,25 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+class MainViewController: UIViewController, Storyboarded {
+    
+    // MARK: - Properties
+    weak var coordinator: MainCoordinator?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        setupViews()
     }
-
 
 }
 
+// MARK: - Setup views
+private extension MainViewController {
+    func setupViews() {
+        setupNavigationBar()
+    }
+    
+    func setupNavigationBar() {
+        navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+}

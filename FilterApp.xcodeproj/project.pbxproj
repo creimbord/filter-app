@@ -29,6 +29,14 @@
 		CC2A8DBF2448E09F00E0B399 /* PhoneCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A8DBE2448E09F00E0B399 /* PhoneCoordinator.swift */; };
 		CC2A8DC12448E0B200E0B399 /* PhoneDetailCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A8DC02448E0B200E0B399 /* PhoneDetailCoordinator.swift */; };
 		CC2A8DC32448E14A00E0B399 /* DataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC2A8DC22448E14A00E0B399 /* DataProvider.swift */; };
+		CC42D416244B3C1E0007A869 /* Storyboarded.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42D415244B3C1E0007A869 /* Storyboarded.swift */; };
+		CC42D418244B3F6F0007A869 /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC42D417244B3F6F0007A869 /* Coordinator.swift */; };
+		CCE1BC5C2449A96E00ED6D63 /* Filter.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CCE1BC5B2449A96E00ED6D63 /* Filter.storyboard */; };
+		CCE1BC5F2449A99A00ED6D63 /* FilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1BC5E2449A99A00ED6D63 /* FilterViewController.swift */; };
+		CCE1BC612449A9AE00ED6D63 /* FilterPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1BC602449A9AE00ED6D63 /* FilterPresenter.swift */; };
+		CCE1BC632449B42E00ED6D63 /* PhoneDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1BC622449B42E00ED6D63 /* PhoneDataSource.swift */; };
+		CCE1BC652449C7EA00ED6D63 /* FilterStrategy.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1BC642449C7EA00ED6D63 /* FilterStrategy.swift */; };
+		CCE1BC672449C7F900ED6D63 /* FilterDecorator.swift in Sources */ = {isa = PBXBuildFile; fileRef = CCE1BC662449C7F900ED6D63 /* FilterDecorator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -68,6 +76,14 @@
 		CC2A8DBE2448E09F00E0B399 /* PhoneCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneCoordinator.swift; sourceTree = "<group>"; };
 		CC2A8DC02448E0B200E0B399 /* PhoneDetailCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDetailCoordinator.swift; sourceTree = "<group>"; };
 		CC2A8DC22448E14A00E0B399 /* DataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataProvider.swift; sourceTree = "<group>"; };
+		CC42D415244B3C1E0007A869 /* Storyboarded.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Storyboarded.swift; sourceTree = "<group>"; };
+		CC42D417244B3F6F0007A869 /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		CCE1BC5B2449A96E00ED6D63 /* Filter.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Filter.storyboard; sourceTree = "<group>"; };
+		CCE1BC5E2449A99A00ED6D63 /* FilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterViewController.swift; sourceTree = "<group>"; };
+		CCE1BC602449A9AE00ED6D63 /* FilterPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterPresenter.swift; sourceTree = "<group>"; };
+		CCE1BC622449B42E00ED6D63 /* PhoneDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhoneDataSource.swift; sourceTree = "<group>"; };
+		CCE1BC642449C7EA00ED6D63 /* FilterStrategy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterStrategy.swift; sourceTree = "<group>"; };
+		CCE1BC662449C7F900ED6D63 /* FilterDecorator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterDecorator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -134,6 +150,7 @@
 			children = (
 				CC2A8D952448D53200E0B399 /* Main */,
 				CC2A8D992448D5DB00E0B399 /* Phone */,
+				CCE1BC582449A94400ED6D63 /* Filter */,
 				CC2A8D9A2448D60A00E0B399 /* PhoneDetail */,
 			);
 			path = Modules;
@@ -211,6 +228,7 @@
 			isa = PBXGroup;
 			children = (
 				CC2A8DAB2448D92900E0B399 /* PhonePresenter.swift */,
+				CCE1BC622449B42E00ED6D63 /* PhoneDataSource.swift */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -260,6 +278,8 @@
 			isa = PBXGroup;
 			children = (
 				CC2A8DC22448E14A00E0B399 /* DataProvider.swift */,
+				CC42D415244B3C1E0007A869 /* Storyboarded.swift */,
+				CC42D417244B3F6F0007A869 /* Coordinator.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -286,6 +306,34 @@
 				CC2A8DBA2448E05100E0B399 /* PhoneDetailAssembly.swift */,
 			);
 			path = Assembly;
+			sourceTree = "<group>";
+		};
+		CCE1BC582449A94400ED6D63 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1BC592449A95200ED6D63 /* View */,
+				CCE1BC5A2449A95500ED6D63 /* Presenter */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		CCE1BC592449A95200ED6D63 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1BC5B2449A96E00ED6D63 /* Filter.storyboard */,
+				CCE1BC5E2449A99A00ED6D63 /* FilterViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		CCE1BC5A2449A95500ED6D63 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				CCE1BC642449C7EA00ED6D63 /* FilterStrategy.swift */,
+				CCE1BC662449C7F900ED6D63 /* FilterDecorator.swift */,
+				CCE1BC602449A9AE00ED6D63 /* FilterPresenter.swift */,
+			);
+			path = Presenter;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -371,6 +419,7 @@
 			files = (
 				CC2A8DB02448D94D00E0B399 /* PhoneDetail.storyboard in Resources */,
 				CC2A8D7F2448C7E300E0B399 /* LaunchScreen.storyboard in Resources */,
+				CCE1BC5C2449A96E00ED6D63 /* Filter.storyboard in Resources */,
 				CC2A8DAA2448D8D800E0B399 /* Phone.storyboard in Resources */,
 				CC2A8D7C2448C7E300E0B399 /* Assets.xcassets in Resources */,
 				CC2A8D7A2448C7E000E0B399 /* Main.storyboard in Resources */,
@@ -391,21 +440,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CCE1BC632449B42E00ED6D63 /* PhoneDataSource.swift in Sources */,
 				CC2A8DB72448E03100E0B399 /* MainAssembly.swift in Sources */,
 				CC2A8DBB2448E05100E0B399 /* PhoneDetailAssembly.swift in Sources */,
 				CC2A8DC32448E14A00E0B399 /* DataProvider.swift in Sources */,
+				CCE1BC5F2449A99A00ED6D63 /* FilterViewController.swift in Sources */,
 				CC2A8D772448C7E000E0B399 /* MainViewController.swift in Sources */,
 				CC2A8D732448C7E000E0B399 /* AppDelegate.swift in Sources */,
+				CC42D416244B3C1E0007A869 /* Storyboarded.swift in Sources */,
+				CCE1BC612449A9AE00ED6D63 /* FilterPresenter.swift in Sources */,
 				CC2A8DA62448D6D700E0B399 /* Phone.swift in Sources */,
 				CC2A8DA82448D8B800E0B399 /* PhoneViewController.swift in Sources */,
 				CC2A8DB22448D95F00E0B399 /* PhoneDetailPresenter.swift in Sources */,
 				CC2A8D752448C7E000E0B399 /* SceneDelegate.swift in Sources */,
+				CCE1BC652449C7EA00ED6D63 /* FilterStrategy.swift in Sources */,
 				CC2A8DAC2448D92900E0B399 /* PhonePresenter.swift in Sources */,
 				CC2A8DBF2448E09F00E0B399 /* PhoneCoordinator.swift in Sources */,
 				CC2A8DAE2448D93C00E0B399 /* PhoneDetailViewController.swift in Sources */,
+				CC42D418244B3F6F0007A869 /* Coordinator.swift in Sources */,
 				CC2A8DC12448E0B200E0B399 /* PhoneDetailCoordinator.swift in Sources */,
 				CC2A8DBD2448E08E00E0B399 /* MainCoordinator.swift in Sources */,
 				CC2A8DB92448E04200E0B399 /* PhoneAssembly.swift in Sources */,
+				CCE1BC672449C7F900ED6D63 /* FilterDecorator.swift in Sources */,
 				CC2A8DA42448D6C500E0B399 /* MainPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
